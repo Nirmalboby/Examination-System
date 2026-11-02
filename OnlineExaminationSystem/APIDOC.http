@@ -1,0 +1,58 @@
+### GET: Retrieve all questions
+GET http://127.0.0.1:8000/questions/
+Accept: application/json
+
+### POST: Create a question
+POST http://127.0.0.1:8000/questions/
+Content-Type: application/json
+
+{
+    "question": "What is the output of print(4 + 3)?",
+    "option_a": "4",
+    "option_b": "5",
+    "option_c": "6",
+    "option_d": "7",
+    "correct_answer": "option_d"
+}
+
+### GET: Retrieve one question
+GET http://127.0.0.1:8000/question/55/
+Accept: application/json
+
+### PUT: Update a question
+PUT http://127.0.0.1:8000/question/1/
+Content-Type: application/json
+
+{
+    "question": "What is the output of print(10 - 4)?",
+    "option_a": "4",
+    "option_b": "5",
+    "option_c": "6",
+    "option_d": "7",
+    "correct_answer": "option_c"
+}
+
+### DELETE: Delete a question
+DELETE http://127.0.0.1:8000/question/1/
+Accept: application/json
+
+#API call to retrive all submissions
+###
+GET http://127.0.0.1:8000/submissions/
+Accept: application/json
+
+#API call for submitting answers
+###
+POST http://127.0.0.1:8000/submissions/
+Content-Type:  application/json
+
+{
+    "student_name":  "Ajith",
+    "question":1,
+    "selected_answer": "option_b"
+}
+
+### GET: Retrieve one submission
+GET http://127.0.0.1:8000/submissions/1/
+Accept: application/json
+
